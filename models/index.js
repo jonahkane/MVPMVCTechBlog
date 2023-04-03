@@ -1,5 +1,13 @@
-// const (user and project/blog) then require
-//has many, belongs to. etc. etc. etc.
-//module.exports = { CONSTS FROM ABOVE }
+const User = require('/User');
+const Blog = require('./Blog');
 
-//MAKE ADDITIOANL MODEL FOR EACH CONST LISTED ABOVE
+User.hasMany(Blog {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+});
+
+Blog.belongsTo(User {
+    foreignKey: 'user_id'
+});
+
+module.exports = { User, Blog };    
