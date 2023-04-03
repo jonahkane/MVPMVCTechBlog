@@ -63,5 +63,14 @@ router.get('/profile', withAuth, async (req, res) => {
     }
 });
 
+router.get('/login', (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect('/profile');
+        return;
+        }
+
+        res.render('login');
+});
+
 // need get routes for '/' '/blog/:id' '/profile' and '/login'
 module.exports = router;
