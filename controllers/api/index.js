@@ -1,5 +1,8 @@
-// all the const files and require express and the various routes - ie user and proejct routes.  for this, probably user and blog?
+const router = require('express').Router();
+const dashboardRoutes = require('./dashboardRoutes');
+const userRoutes = require('./userRoutes');
 
-// then router . use those same routes
+router.use('/dashboard', dashboardRoutes);
+router.use('/users', userRoutes);
 
-// module.exports = router;
+module.exports = router;
