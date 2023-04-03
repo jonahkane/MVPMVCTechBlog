@@ -23,6 +23,27 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/blog/:id', async (req, res) => {
+    try {
+        const blogData = await Blog.findByPk(req.params.id, {
+    include: [
+        {
+            model: User,
+            attributes: ['name'],
+        },
+    ],
+});
+
+const blog = blogData.get({ plain: true });
+
+res.render('blog', {
+    ...Blog,
+    logged_in: req.session.logged_in
+});
+} catch (err) {
+    res.status(500).json(err);
+}
+});
 
 // need get routes for '/' '/blog/:id' '/profile' and '/login'
 module.exports = router;
