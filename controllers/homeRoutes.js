@@ -1,11 +1,7 @@
-//need the following items
-// homepage
-//dashboard
-//login
+const router = require('express').Router();
+const { Blog, User } = require('../models');
+const withAuth = require('../utils/auth');
 
-//samples
-// router.get /
-// router.get /project/id
-// router.get /profile
-// router.get /login
 
+// need get routes for '/' '/blog/:id' '/profile' and '/login'
+module.exports = router;
