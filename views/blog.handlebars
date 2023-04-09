@@ -1,17 +1,10 @@
-<html> 
-<head> 
-    
-</head>
-<body>
-
-
-  <div class="text-center stuff">
+<div class="text-center">
   <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
   <p>{{description}}</p>
   <p>Posted by {{user.name}} on {{format_date date_created}}</p>
-
+        {{#if logged_in}}
+  <p>
+    <button class="btn btn-primary">Edit blog entry</button>
+  </p>
+        {{/if}}
 </div>
-    </body>
-  </html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
