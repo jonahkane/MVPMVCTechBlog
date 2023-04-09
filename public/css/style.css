@@ -1,0 +1,60 @@
+header, .blog {
+    border-bottom: 1px solid #ccc;
+    background-color: #231010;
+    color: #d9ead3;
+  }
+  .maincontainer {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+  }
+  .subcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  /* .title {
+    background-color:#d9ead3;
+    color: #231010;
+  
+  } */
+  .blogentry {
+    background-color: #d9ead3;
+    color: #231010;
+  }
+  .entries {
+    background-color: #056605;
+    color: #231010;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+  }
+  .no-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #1b89bc;
+    text-decoration: none;
+    font-size: 100%;
+  }
+  
+  .no-button:hover {
+    color: #065b83;
+    text-decoration: underline;
+  }
+  
+  .dollar-amount {
+    color: #056605;
+    font-weight: bold;
+    margin-left: -5px;
+  }
+  
+  body {
+  background-color: #d9ead3;
+  }
+  
+  a {
+    color: #d9ead3;
+  
+  }
