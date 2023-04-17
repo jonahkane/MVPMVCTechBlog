@@ -1,57 +1,23 @@
-<div class="login-container mt-3 pt-3">
+<section class="login-page">
+    <div class="form-heading">
+        <h1>Log In</h1>
+    </div>
+    <div class="form-section">
+        <form class="login-form">
+            <div>
+                <label for="username-login">Username</label>
+                <input type="text" class="entry-field" id="username-login" />
+            </div>
+            <div>
+                <label for="password-login">Password</label>
+                <input type="password" class="entry-field" id="password-login" />
+            </div>
+            <div>
+                <button type="submit" class="login-signup-btn">Log In!</button>
+            </div>
+        </form>
+    </div>
 
-<div class="row">
-  <div class="col-md-6">
-    <h2>Login</h2>
-
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login" class="col-sm-3 control-label">E-mail:</label>
-        <div class="col-sm-9">
-        
-        
-        
-        <input class="form-input" type="text" id="email-login" placeholder="Email Address"/>
-      </div>
-      <div class="form-group">
-        <label for="password-login" class="col-sm-3 control-label">Password:</label>
-        <div class="col-sm-9">
-
-        <input class="form-input" type="password" id="password-login" placeholder="Password"/>
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">Login</button>
-      </div>
-    </form>
-  </div>
-  <div class="col-md-6">
-    <h2>Sign-up</h2>
-
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">Name:</label>
-        <div class="col-sm-9">
-
-        <input class="form-input" type="text" id="name-signup" placeholder="Username"/>
-      </div>
-      <div class="form-group">
-        <label for="email-signup">E-mail:</label>
-                <div class="col-sm-9">
-
-        <input class="form-input" type="text" id="email-signup" placeholder="Email Address"/>
-      </div>
-      <div class="form-group">
-        <label for="password-signup">Password:</label>
-                <div class="col-sm-9">
-
-        <input class="form-input" type="password" id="password-signup" placeholder="Password"/>
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">Sign-up</button>
-      </div>
-    </form>
-  </div>
-</div>
-</div>
-
-<script src="./js/login.js"></script>
+    <a href="/signup" class="sign-in-link">sign up instead</a>
+</section>
+<script src="/public/js/login.js"></script>

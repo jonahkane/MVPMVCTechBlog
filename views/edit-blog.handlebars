@@ -1,0 +1,30 @@
+<a href="/dashboard" class="go-back"> &larr; Back to dashboard</a>
+
+<article class="new-page">
+    <section class="edit-form-page">
+        <div class="form-heading">
+            <h2>
+                Edit Blog
+            </h2>
+        </div>
+        <div class="form-section">
+            <form class="edit-blog-form">
+                <div class="blog-title-section">
+                    <label for="blog-title">Title</label>
+                    <input type="text" name="blog-title" id="blog-title" value="{{blog.title}}" />
+                </div>
+                <div class="blog-content">
+                    <label for="blog-content">Content</label>
+                    <textarea class="entry-field" id="blog-content" name="blog-content">{{blog.content}}</textarea>
+                </div>
+                <button type="submit">Update blog</button>
+                <button type="button" class="delete-blog-btn">Delete blog</button>
+            </form>
+        </div>
+    </section>
+</article>
+
+{{#if loggedIn}}
+<script src="/public/js/edit-blog.js"></script>
+<script src="/public/js/delete-blog.js"></script>
+{{/if}}

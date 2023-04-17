@@ -1,70 +1,21 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome to your dashboard, {{name}}!</h2>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a New Blog:</h3>
-
-    <form class="form new-blog-form">
+<section class="new-blog-section">
+    <button type="submit" class="btn" id="create-new-blog">+ Create new blog</button>
+</section>
 
 
-
-      <div class="form-group">
-        <label for="blog-name">Blog title:</label>
-                    <div class="col-sm-9">
-
-        <input class="form-input" type="text" id="blog-name" name="blog-name" placeholder="Blog Title Here"/>
-      </div>
-      </div>
-
-
-
-
-      {{!-- <div class="form-group">
-        <label for="blog-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="blog-funding" name="blog-funding" />
-      </div> --}}
+{{#if blogs.length}}
+<section>
+    <h2>Your Dashboard</h2>
+    <ul class="blog-list">
+        {{#each blogs as |blog|}}
+        <li>
+            {{> blog-info blog}}
+            <a href="/dashboard/edit/{{blog.id}}" class="edit-link">edit blog</a>
+        </li>
+        {{/each}}
+    </ul>
+</section>
+{{/if}}
 
 
-
-
-
-      <div class="form-group">
-        <label for="blog-desc">Blog entry:</label>
-        <div class="col-sm-9">
-
-        <textarea class="form-input" id="blog-desc" name="blog-desc" placeholder="Blog Entry Here"></textarea>
-      </div>
-      </div>
-
-
-
-
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create Blog Entry</button>
-      </div>
-    </form>
-  </div>
-
-  {{#if blogs.length}}
-  <div class="col-md-6 blog-list">
-    <h3>Current Blogs:</h3>
-
-    {{#each blogs as |blog|}}
-    <div class="entries row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/blog/{{blog.id}}">{{blog.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/if}}
-</div>
-
-<script src="./js/dashboard.js"></script>
+<script src="/public/js/create-blog.js"></script>
