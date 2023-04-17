@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
-
+//do i need get routes for / amd /id here?????
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
