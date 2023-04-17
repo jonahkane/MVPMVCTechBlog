@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const {
-    Post,
+    Blog,
     User,
     Comment
 } = require('../models');
@@ -9,7 +9,7 @@ const withAuth = require('../utils/auth');
 
 
 router.get('/', withAuth, (req, res) => {
-    Post.findAll({
+    Blog.findAll({
             where: {
                 user_id: req.session.user_id
             },
@@ -21,7 +21,7 @@ router.get('/', withAuth, (req, res) => {
             ],
             include: [{
                     model: Comment,
-                    attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                    attributes: ['id', 'comment_text', 'blog_id', 'user_id', 'created_at'],
                     include: {
                         model: User,
                         attributes: ['username']
@@ -33,12 +33,12 @@ router.get('/', withAuth, (req, res) => {
                 }
             ]
         })
-        .then(dbPostData => {
-            const posts = dbPostData.map(post => post.get({
+        .then(blogData => {
+            const blogs = blogData.map(blog => blog.get({
                 plain: true
             }));
             res.render('dashboard', {
-                posts,
+                blogs,
                 loggedIn: true
             });
         })
@@ -49,7 +49,7 @@ router.get('/', withAuth, (req, res) => {
 });
 
 router.get('/edit/:id', withAuth, (req, res) => {
-    Post.findOne({
+    Blog.findOne({
             where: {
                 id: req.params.id
             },
@@ -61,7 +61,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
             ],
             include: [{
                     model: Comment,
-                    attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                    attributes: ['id', 'comment_text', 'blog_id', 'user_id', 'created_at'],
                     include: {
                         model: User,
                         attributes: ['username']
@@ -73,20 +73,20 @@ router.get('/edit/:id', withAuth, (req, res) => {
                 }
             ]
         })
-        .then(dbPostData => {
-            if (!dbPostData) {
+        .then(blogData => {
+            if (!blogData) {
                 res.status(404).json({
-                    message: 'No post found with this id'
+                    message: 'No blog found with this id'
                 });
                 return;
             }
 
-            const post = dbPostData.get({
+            const blog = blogData.get({
                 plain: true
             });
 
-            res.render('edit-post', {
-                post,
+            res.render('edit-blog', {
+                blog,
                 loggedIn: true
             });
         })
@@ -97,7 +97,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
 })
 
 router.get('/new', (req, res) => {
-    res.render('add-post', {
+    res.render('add-blog', {
         loggedIn: true
     })
 })
