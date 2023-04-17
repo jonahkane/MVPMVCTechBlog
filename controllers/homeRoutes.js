@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { Blog, User, Comment } = require('../models');
-const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
   Blog.findAll({
@@ -77,7 +76,7 @@ router.get('/blog/:id', (req, res) => {
               plain: true
           });
 
-          res.render('single-blog', {
+          res.render('blog-id', {
               blog,
               loggedIn: req.session.loggedIn
           });
