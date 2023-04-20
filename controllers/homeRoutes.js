@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const sequelize = require('../config/connection');
 const { Blog, User, Comment } = require('../models');
 
 router.get('/', (req, res) => {
@@ -76,7 +77,7 @@ router.get('/blog/:id', (req, res) => {
               plain: true
           });
 
-          res.render('blog-id', {
+          res.render('single-post', {
               blog,
               loggedIn: req.session.loggedIn
           });
@@ -107,7 +108,7 @@ router.get('/signup', (req, res) => {
 
 router.get('*', (req, res) => {
   res.status(404).send("Can't go there!");
-  // res.redirect('/');
+  res.redirect('/');
 })
 
 module.exports = router;
