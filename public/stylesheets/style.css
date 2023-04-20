@@ -1,6 +1,25 @@
 * {
   box-sizing: border-box;
 }
+.nav {
+  background-color: #231010;
+  margin: 0;
+  font-size: 20px;
+}
+.nav li {
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
+}
+.nav li a {
+  text-decoration: none;
+  color: white;
+  margin: 0;
+}
+
+.nav li a:hover {
+  color: lime;
+  font-weight: bold;
+}
 
 body,
 html {
@@ -17,7 +36,7 @@ main,
 }
 
 a,
-.btn-no-style,
+/* .btn-no-style, */
 #comment-subtitle {
   color: #d9ead3;
 }
@@ -72,7 +91,7 @@ input:focus {
 }
 
 textarea {
-  min-width: 40%;
+  min-width: 100%;
   min-height: 100px;
 }
 
@@ -138,6 +157,7 @@ header {
   align-items: center;
   padding: 0 1%;
 }
+
 
 header h1 {
   font-size: 1em;
