@@ -11,29 +11,19 @@
 <body>
     <div class="wrapper">
         <section class="container">
-            <ul class="nav">
-                <li>
 
+        <header>
+            <nav>
+            <h1>
                 <a href="/">home</a>
-                </li>
-                <li>
-
+            </h1>
                 {{#if loggedIn}}
                 <a href="/dashboard">dashboard</a>
-                </li>
-                <li>
-
-                {{!-- <button id="logout" class="btn-no-style logout">logout</button> --}}
-                <a href="/" class="logout">logout</a>
-                </li>
+        <button class="no-button" id="logout">logout</button>
                 {{else}}
-                <li>
-
                 <a href="/login">login</a>
-                </li>
                 {{/if}}
-            </ul>
-
+            </nav>
         </section>
         </header>
         <div class="site-row">
