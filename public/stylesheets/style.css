@@ -34,3 +34,13 @@
   color: #065b83;
   text-decoration: underline;
 }
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+  

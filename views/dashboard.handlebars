@@ -1,4 +1,4 @@
-<section class="new-blog-section">
+<section>
     <button type="submit" class="btn" id="create-new-blog">+ Create new blog</button>
 </section>
 
@@ -6,11 +6,11 @@
 {{#if blogs.length}}
 <section>
     <h2>Your Dashboard</h2>
-    <ul class="blog-list">
+    <ul>
         {{#each blogs as |blog|}}
         <li>
             {{> blog-info blog}}
-            <a href="/dashboard/edit/{{blog.id}}" class="edit-link">edit blog</a>
+            <a href="/dashboard/edit/{{blog.id}}">edit blog</a>
         </li>
         {{/each}}
     </ul>
