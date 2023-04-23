@@ -1,19 +1,16 @@
-const logout = document.querySelector('#logout');
-
-logout.addEventListener('click', async (e) => {
-e.preventDefault();
-try {
+async function logout() {
   const response = await fetch('/api/users/logout', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' }
+      method: 'post',
+      headers: {
+          'Content-Type': 'application/json'
+      }
   });
 
   if (response.ok) {
-    document.location.replace('/');
+      document.location.replace('/');
   } else {
-    alert('Failed to log out. Route broken!');
+      alert(response.statusText);
   }
-}catch (err) {
-  console.log(err);
 }
-});
+
+document.querySelector('#logout').addEventListener('click', logout);
