@@ -18,6 +18,9 @@
   justify-items: center;
 }
 
+body {
+  height: 100%;
+}
 
 .header {
   background-color:brown;
@@ -35,6 +38,7 @@
 }
 main {
   background-color:aqua;
+  flex: 1;
 }
 ul {
   list-style-type: none;

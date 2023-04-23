@@ -1,0 +1,9 @@
+.blog-header {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.blog-text {
+    padding: 10px;
+}
