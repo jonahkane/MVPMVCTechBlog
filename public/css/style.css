@@ -83,3 +83,7 @@ a:hover {
 .back-to-dashboard {
   color: blue;
 }
+
+ul {
+  padding-left: 0;
+}

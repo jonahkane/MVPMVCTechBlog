@@ -5,6 +5,10 @@
 {{> blog-info blog}}
 
 {{#if loggedIn}}
+<div class="comment-entry-form">
+<div>
+
+<p>Enter your comment here</p>
 <form class="comment-form">
     <div>
         <textarea name="comment-body" class="entry-field"></textarea>
@@ -14,6 +18,8 @@
         <button type="submit" class="btn">add comment</button>
     </div>
 </form>
+</div>
+</div>
 {{/if}}
 
 {{> comments blog.comments}}

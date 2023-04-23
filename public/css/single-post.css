@@ -2,3 +2,9 @@
     display: flex;
     margin: 5%;
 }
+.comment-entry-form{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    padding: 10px;
+}
