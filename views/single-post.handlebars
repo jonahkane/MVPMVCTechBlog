@@ -5,9 +5,9 @@
 {{> blog-info blog}}
 
 {{#if loggedIn}}
-<form>
+<form class="comment-form">
     <div>
-        <textarea name="comment-body" class="comment-body entry-field"></textarea>
+        <textarea name="comment-body" class="entry-field"></textarea>
     </div>
 
     <div class="comment-btn-div">
@@ -19,4 +19,5 @@
 {{> comments blog.comments}}
 
 {{#if loggedIn}}
-<script src="/js/comment.js"></script>{{/if}}
+<script src="/js/comment.js"></script>
+{{/if}}

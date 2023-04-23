@@ -7,3 +7,10 @@
 .blog-text {
     padding: 10px;
 }
+
+.comment {
+    padding: 1%;
+    margin: 5%;
+    border: 1px solid black;
+    color: gray;
+}
