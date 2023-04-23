@@ -1,0 +1,14 @@
+.signup-section {
+    border: 3px solid black;
+    padding: 10px;
+}
+
+.signup-header {
+padding: 10px;
+}
+
+.signup-header h1 {
+    color: aqua;
+}
+.form-section {
+justify-content: center;}
