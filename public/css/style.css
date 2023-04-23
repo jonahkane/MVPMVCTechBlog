@@ -1,39 +1,6 @@
 * {
   box-sizing: border-box;
 }
-.nav {
-  background-color: #231010;
-  margin: 0;
-  font-size: 20px;
-}
-.nav li {
-  display: inline-block;
-  padding: 10px 10px 10px 10px;
-}
-.nav li a {
-  text-decoration: none;
-  color: white;
-  margin: 0;
-}
-
-.nav li a:hover {
-  color: lime;
-  font-weight: bold;
-}
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
-}
-
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
-}
 
 .wrapper {
   width: 100%;
@@ -44,3 +11,27 @@
   flex-direction: column;
 }
   
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+
+.header {
+  background-color: brown;
+}
+
+.blog-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.blog-post {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  background-color: blue;
+}
