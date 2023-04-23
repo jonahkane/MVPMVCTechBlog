@@ -1,18 +1,19 @@
-<a href="/dashboard"> &larr; Back to dashboard</a>
+<a href="/dashboard"> Click here to go back to your dashboard</a>
 
-<article>
-  <section>
+<article class="edit-blog">
+  <section class="edit-blog-form">
     <div>
       <h2>
         Edit Blog
       </h2>
     </div>
     <div>
-      <form>
+      <form class="new-blog-entry">
         <div>
           <label for="blog-title">Title</label>
           <input
             type="text"
+            class="entry-field"
             name="blog-title"
             id="blog-title"
             value="{{blog.title}}"
@@ -26,8 +27,11 @@
             name="blog-content"
           >{{blog.content}}</textarea>
         </div>
-        <button type="submit">Update blog</button>
-        <button type="button" class="delete-blog-btn">Delete blog</button>
+        <div class="buttons">
+
+          <button type="submit" class="edit-btn btn">Update blog</button>
+          <button type="button" class="edit-btn btn delete-blog-btn">Delete blog</button>
+        </div>
       </form>
     </div>
   </section>
