@@ -20,7 +20,8 @@
 
 
 .header {
-  background-color: brown;
+  background-color:brown;
+  
 }
 
 .blog-header {
@@ -33,5 +34,27 @@
   flex-direction: column;
 }
 main {
-  background-color: blue;
+  background-color:aqua;
+}
+ul {
+  list-style-type: none;
+}
+.blog {
+  margin: 2%;
+  border: 1px solid black;
+}
+.page-title {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid lime;
+  background-color: brown;
+}
+.title {
+  background-color: aqua;
+  margin: 1%;
+  padding: 1%;
+  border-style: double;
+}
+.entry-field {
+  width: 100%;
 }
