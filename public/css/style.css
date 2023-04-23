@@ -58,3 +58,11 @@ ul {
 .entry-field {
   width: 100%;
 }
+
+a {
+  color: lime;
+}
+
+a:hover {
+  color: hotpink
+}
