@@ -1,7 +1,7 @@
 <a href="/dashboard"> Click here to go back to your dashboard</a>
 
 <article class="new-blog">
-  <section>
+  <section class="new-blog-form">
     <div>
       <h2>Create New Blog</h2>
     </div>
@@ -9,7 +9,12 @@
       <form class="new-blog-entry">
         <div>
           <label for="blog-title">Title</label>
-          <input type="text" id="blog-title" name="blog-title" />
+          <input
+            type="text"
+            class="entry-field"
+            id="blog-title"
+            name="blog-title"
+          />
         </div>
         <div>
           <label for="blog-content">Content</label>
@@ -19,7 +24,10 @@
             name="blog-content"
           ></textarea>
         </div>
-        <button type="submit" class="btn">Create</button>
+        <div class="button-div">
+
+          <button type="submit" class="btn">Create</button>
+        </div>
       </form>
     </div>
   </section>

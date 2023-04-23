@@ -70,3 +70,12 @@ a {
 a:hover {
   color: hotpink
 }
+
+.btn {
+  width: 25%;
+  border: 3px solid white;
+  padding: 10px;
+  margin: auto;
+  background-color: blue;
+  color: white;
+}

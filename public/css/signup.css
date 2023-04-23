@@ -11,4 +11,8 @@ padding: 10px;
     color: aqua;
 }
 .form-section {
-justify-content: center;}
+justify-content: center;
+}
+.login-instead {
+    color: black;
+}
