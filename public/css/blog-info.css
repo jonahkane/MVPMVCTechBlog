@@ -10,7 +10,9 @@
 
 .comment {
     padding: 1%;
-    margin: 5%;
+    margin: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
     border: 1px solid black;
     color: gray;
 }

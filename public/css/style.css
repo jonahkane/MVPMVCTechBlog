@@ -87,3 +87,7 @@ a:hover {
 ul {
   padding-left: 0;
 }
+
+.dashboard-section {
+  margin: 2%;
+}

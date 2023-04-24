@@ -2,3 +2,13 @@
     display: flex;
     flex-direction: column;
 }
+.edit-blog {
+    margin: 2%;
+}
+.edit-blog-form {
+    margin: 2%;
+    border: 3px solid black;
+}
+.new-blog-entry {
+    margin: 2%;
+}

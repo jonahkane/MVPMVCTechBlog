@@ -204,45 +204,51 @@ router.put("/:id", withAuth, async (req, res) => {
 //       });
 // });
 
-router.delete("/:id", withAuth, async (req, res) => {
-    try {
-        const blogData = await Blog.destroy({
-            where: {
-                id: req.params.id,
-                user_id: req.params.user_id
-            }
-        });
-        if (!blogData) {
-            res.status(404).json({
-                message: "No blog with this id"
-            });
-            return;
-        }
-        res.json(blogData);
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
-// router.delete("/:id", withAuth, (req, res) => {
-//   Blog.destroy({
-//           where: {
-//               id: req.params.id,
-//           },
-//       })
-//       .then((blogData) => {
-//           if (!blogData) {
-//               res.status(404).json({
-//                   message: "No blog found with this id"
-//               });
-//               return;
-//           }
-//           res.json(blogData);
-//       })
-//       .catch((err) => {
-//           console.log(err);
-//           res.status(500).json(err);
-//       });
+// router.delete("/:id", withAuth, async (req, res) => {
+//     try {
+//         const blogData = await Blog.findOne({
+//             where: {
+//                 id: req.params.id,
+//                 user_id: req.params.user_id
+//             }
+//         });
+//         if (!blogData) {
+//             res.status(404).json({
+//                 message: "No blog with this id"
+//             });
+//             return;
+//         }
+
+//         await Blog.destroy({
+//             where: { id: req.params.id }
+//         })
+//         res.status(200).json({ 
+//             message: "Blog has been deleted"
+//         });
+//     } catch (err) {
+//         console.log(err);
+//         res.status(500).json(err);
+//     }
 // });
+router.delete("/:id", withAuth, (req, res) => {
+  Blog.destroy({
+          where: {
+              id: req.params.id,
+          },
+      })
+      .then((blogData) => {
+          if (!blogData) {
+              res.status(404).json({
+                  message: "No blog found with this id"
+              });
+              return;
+          }
+          res.json(blogData);
+      })
+      .catch((err) => {
+          console.log(err);
+          res.status(500).json(err);
+      });
+});
 
 module.exports = router;
