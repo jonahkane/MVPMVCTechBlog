@@ -91,3 +91,6 @@ ul {
 dashboard-section {
   margin: 2%;
 }
+
+
+/* i created a separate stylesheet for each handlebars view to more easily navigate and update styling properties when buliding this site */

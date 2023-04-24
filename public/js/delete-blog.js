@@ -1,3 +1,4 @@
+//function used to delte blog from list/dashboard
 async function deleteFormHandler(event) {
     event.preventDefault();
 

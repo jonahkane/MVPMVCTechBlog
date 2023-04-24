@@ -1,3 +1,4 @@
+//function called when user clicks button to add new blog. starts process
 async function createBlogHandler(event) {
     event.preventDefault();
 

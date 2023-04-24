@@ -1,3 +1,4 @@
+//edit blog function - finds blog by ID and then renders it to the page allowing user to update as needed
 async function editFormHandler(event) {
     event.preventDefault();
 

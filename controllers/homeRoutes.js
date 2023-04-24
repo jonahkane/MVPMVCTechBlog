@@ -2,6 +2,8 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Blog, User, Comment } = require('../models');
 
+
+//find all blog entries
 router.get("/", async (req, res) => {
     try {
         const blogData = await Blog.findAll({
@@ -40,6 +42,7 @@ router.get("/", async (req, res) => {
 });
 
 
+//find one blog entry
 router.get("/blog/:id", async (req, res) => {
     try {
         const blogData = await Blog.findOne({
@@ -87,6 +90,8 @@ router.get("/blog/:id", async (req, res) => {
     }
 });
 
+
+//log in route
 router.get("/login", async (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -102,7 +107,7 @@ router.get("/login", async (req, res) => {
 });
 
 
-
+//signup route
 router.get('/signup', async (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');

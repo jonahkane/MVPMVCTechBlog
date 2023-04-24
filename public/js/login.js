@@ -1,3 +1,4 @@
+//function used to log in. will direct the user to the dashboard page if success.
 async function loginFormHandler(event) {
   event.preventDefault();
 

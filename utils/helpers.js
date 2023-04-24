@@ -8,3 +8,4 @@ function formatDate(date) {
 module.exports = {
   formatDate
 }
+//provides time date stamp for when entries/comments are created

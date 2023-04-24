@@ -1,3 +1,4 @@
+//function used if user has not previously signed up.  must sign up first, then will direct them to the dashboard
 async function signupFormHandler(event) {
     event.preventDefault();
 

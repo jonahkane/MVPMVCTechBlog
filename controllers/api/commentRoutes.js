@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Blog, Comment} = require('../../models');
 const withAuth = require('../../utils/auth');
 
-
+//find all comments
 router.get("/", async (req, res) => {
     try {
         const commentData = await Comment.findAll();
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 });
 
 
-
+//add comment to an exsting blog
 router.post("/", withAuth, async (req, res) => {
     if (req.session) {
         try {

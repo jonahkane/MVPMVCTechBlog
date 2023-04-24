@@ -7,7 +7,7 @@ const {
 } = require('../models');   
 const withAuth = require('../utils/auth');
 
-
+//find all blog entries
 router.get("/", withAuth, async (req, res) => {
     try {
         const blogData = await Blog.findAll({
@@ -48,7 +48,7 @@ router.get("/", withAuth, async (req, res) => {
     }
 });
 
-
+//edit blog entry if logged in and it is "your" entry
 router.get("/edit/:id", withAuth, async (req, res) => {
     try {
         const blogData = await Blog.findOne({
@@ -96,7 +96,7 @@ router.get("/edit/:id", withAuth, async (req, res) => {
 });
 
 
-
+//create a new blog entry
 router.get("/new", async (req, res) => {
     try {
         res.render('add-blog', {

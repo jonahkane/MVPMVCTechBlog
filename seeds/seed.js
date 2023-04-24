@@ -23,3 +23,6 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
+
+//i wanted some seed data to simply have something render on the page when visiting the site.  used data from demo of page on bootcamp spot
+//also utilized seed data from homework assignment to have user data populate as well

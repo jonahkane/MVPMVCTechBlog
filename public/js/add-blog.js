@@ -1,3 +1,4 @@
+//function that is called when new blog is being created
 async function newFormHandler(event) {
     event.preventDefault();
 

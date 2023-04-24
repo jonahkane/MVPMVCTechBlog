@@ -2,6 +2,8 @@ const router = require('express').Router();
 const { Blog, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+
+//get all blog entries
 router.get("/", async (req,res) => {
     try {
         const blogData = await Blog.findAll({
@@ -31,6 +33,7 @@ router.get("/", async (req,res) => {
     }
 });
 
+//get one specific blog entry
 router.get("/:id", async (req, res) => {
     try {
         const blogData = await Blog.findOne({
@@ -66,6 +69,7 @@ router.get("/:id", async (req, res) => {
     }
 });
 
+//create new blog
 router.post("/", withAuth, async (req, res) => {
 try {
     const blogData = await Blog.create({
@@ -80,6 +84,7 @@ try {
 }
 });
 
+//update existing blog
 router.put("/:id", withAuth, async (req, res) => {
     try {
         const blogData = await Blog.update(
@@ -105,6 +110,7 @@ router.put("/:id", withAuth, async (req, res) => {
     }
 });
   
+//delete existing blog
 router.delete("/:id", withAuth, (req, res) => {
   Blog.destroy({
           where: {
