@@ -23,7 +23,7 @@ body {
 }
 
 .header {
-  background-color:brown;
+  background-color: #231010;
   
 }
 
@@ -37,7 +37,7 @@ body {
   flex-direction: column;
 }
 main {
-  background-color:aqua;
+  background-color:#d9ead3;
   flex: 1;
 }
 ul {
@@ -51,10 +51,10 @@ ul {
   display: flex;
   justify-content: center;
   border-bottom: 1px solid lime;
-  background-color: brown;
+  background-color: 231010;
 }
 .title {
-  background-color: aqua;
+  background-color: #d9ead3;
   margin: 1%;
   padding: 1%;
   border-style: double;
@@ -88,6 +88,6 @@ ul {
   padding-left: 0;
 }
 
-.dashboard-section {
+dashboard-section {
   margin: 2%;
 }
