@@ -17,7 +17,7 @@ This project is a CMS style blog site that is similar to a Wordpress site. Users
 
 ## Installation
 
-This is a fully deployed app on Heroku. No installation required.
+This is a fully deployed app on Heroku. No installation required. Simply visit the deployed app at https://vast-cliffs-35981.herokuapp.com/
 
 ## Usage
 
